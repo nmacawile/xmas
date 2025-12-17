@@ -12,8 +12,8 @@ service cloud.firestore {
       // Make sure to write security rules for your app before that time, or
       // else all client requests to your database will be denied until you
       // update your rules.
-      
-      allow read, write: if request.time >= timestamp.value(1766592000000); // Date Thu Dec 25 2025 00:00:00 GMT+0800 (Taiwan Standard Time)
+      allow write: if false;
+      allow read: if request.time >= timestamp.value(1766592000000); // Date Thu Dec 25 2025 00:00:00 GMT+0800 (Taiwan Standard Time)
     }
   }
 }
